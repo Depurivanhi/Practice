@@ -1,0 +1,102 @@
+PROGRAM 1:
+import java.util.*;
+import java.io.*;
+class Byte {
+       public static void main(String []args)
+       {
+           Scanner sc = new Scanner(System.in);
+            int t=sc.nextInt();
+            for(int i=0;i<t;i++)
+             {
+                try
+                {
+                      long x=sc.nextLong();
+                      System.out.println(x+" can be fitted in :");
+                       if(x>=-128 && x<=127)
+                      System.out.print("* byte");
+                       if(x>-32768 && x <=32767)
+                     System.out.println("* short");
+                       if(x>=-2147483648 && x<=214783647)    
+                     System.out.println("* int");  
+                       if(x>=-9223372036854775807L && x<=922337203685477580L)
+                     System.out.println("* long");
+                    }
+                 catch(Exception e)
+                   {
+                      System.out.println(sc.next()+" cant br fitted anywhere");
+                 }
+                }
+             }
+          }
+
+
+OUTPUT:
+5
+-150
+-150 can be fitted in :
+* short
+* int
+* long
+150000
+150000 can be fitted in :
+* int
+* long
+1500000000
+1500000000 can be fitted in :
+* long
+213333333333333333333333333333333333333
+213333333333333333333333333333333333333 cant br fittedanywhere
+-1000000000000000000000000
+-1000000000000000000000000 cant be fitted anywhere
+
+ PROGRAM 4:
+import java.util.Scanner;
+class Range
+{
+   public static void main(String args[]) {
+   Scanner sc = new Scanner(System.in);
+   System.out.println("enter your number:");
+   int n =sc.nextInt();
+   if(n>=-100 &&n<=100)
+    {
+     System.out.println("good job");
+    }
+ else
+  {
+    System.out.println("wrong answer");
+    }
+  }
+}
+OUTPUT:
+enter your number:
+100
+good job
+
+
+
+PROGRAM 5:
+import java.util.*;
+import java.text.*;
+class Currency
+{
+  public static void main(String args[])
+    {
+      Scanner sc=new Scanner(System.in);
+       double payment=sc.nextDouble();
+        sc.close();
+       String us=NumberFormat.getCurrencyInstance(Locale.US).format(payment);
+       String india=NumberFormat.getCurrencyInstance(new Locale("en")).format(payment);
+       String china=NumberFormat.getCurrencyInstance(Locale.CHINA).format(payment);
+       String france=NumberFormat.getCurrencyInstance(Locale.FRANCE).format(payment);
+       System.out.println("US:"+us);
+       System.out.println("INDIA:"+us);
+       System.out.println("china:"+china);
+       System.out.println("FRANCE:"+france);
+      }
+}
+OUTPUT:
+12324.134
+US:$12,324.13
+INDIA:$12,324.13
+china:¥12,324.13
+FRANCE:12?324,13 ?

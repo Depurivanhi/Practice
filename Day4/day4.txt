@@ -1,0 +1,145 @@
+Program1:
+*********
+import java.util.*;
+public class program { 
+public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+String A=sc.next();
+String B=sc.next();
+int n=A.length()+B.length();
+System.out.println(n);
+int c=A.compareTo(B);
+if(c>0){
+System.out.println("Yes");
+}
+else{
+System.out.println("No");
+}
+System.out.println(A.substring(0,1).toUpperCase()+A.substring(1).toLowerCase()+" ");
+System.out.println(B.substring(0,1).toUpperCase()+B.substring(1).toLowerCase()+" ");
+sc.close();
+}
+}
+
+Output
+******
+hello
+java
+9
+No
+Hello
+Java
+
+Program2:
+*********
+import java.util.*;
+public class Substring {
+static int n;
+public static void main (String[] args) {
+Scanner sc=new Scanner(System.in);
+String s=sc.next ();
+int start =sc.nextInt();
+int end=sc.nextInt();
+System.out.println(s.substring(start,end));
+sc.close();
+}
+}
+
+Output
+******
+Helloworld
+3 7
+lowo
+
+Program3:
+*********
+import java.util.*;
+public class anagrams {
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+String s1=sc.next();
+String s2=sc.next();
+boolean status=true;
+if(s1.length()!=s2.length()){
+status=false;
+}
+else{
+char[] Arrays1=s1.toLowerCase().toCharArray();
+char[] Arrays2=s2.toLowerCase().toCharArray();
+Arrays.sort(Arrays1);
+Arrays.sort(Arrays2);
+status=Arrays.equals(Arrays1,Arrays2);
+}
+if(status){
+System.out.println("anagrams");
+}
+else{
+System.out.println("not anagrams");
+}
+}
+}
+
+Output
+******
+C:\Users\lenovo\Documents>javac anagrams.java
+C:\Users\lenovo\Documents>java anagrams
+anagram
+margana
+
+anagrams
+
+Program4:
+*********
+import java.util.*;
+public class palindrome{
+public static void main(String[] args){
+String a,b="";
+Scanner sc=new Scanner(System.in);
+a=sc.nextLine();
+int n=a.length();
+for(int i=n-1;i>=0;i--){
+b=b+a.charAt(i);
+sc.close();
+}
+if(a.equalsIgnoreCase(b)){
+System.out.println("Yes");
+}
+else{
+System.out.println("no");
+}
+}
+}
+
+Output
+******
+madam
+
+Yes
+
+Program5:
+********
+import java.util.*;
+public class primes{
+static int count;
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int num=sc.nextInt();
+for(int i=2;i<=num;i++)
+{
+if(num%i==0)
+count++;
+}
+if(count==0){
+System.out.println(num+ "is a prime number");
+}
+else{
+System.out.println(num+ "is a prime number");
+}
+}
+}
+
+Output
+******
+17
+17is a prime number
+
